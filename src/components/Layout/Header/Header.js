@@ -3,7 +3,7 @@ import logo from "../../../assets/logo.png";
 import styles from "./Header.module.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Navbar
       bg="dark"
@@ -29,13 +29,25 @@ const Header = () => {
                 <NavDropdown.Item>Portuguese</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Currency">
-                <NavDropdown.Item>USD ($)</NavDropdown.Item>
-                <NavDropdown.Item>EUR (€)</NavDropdown.Item>
-                <NavDropdown.Item>GBP (£)</NavDropdown.Item>
-                <NavDropdown.Item>YEN (¥)</NavDropdown.Item>
-                <NavDropdown.Item>BRL (R$)</NavDropdown.Item>
-                <NavDropdown.Item>CNY (¥)</NavDropdown.Item>
+              <NavDropdown title={`Currency (${props.currency})`}>
+                <NavDropdown.Item onClick={() => props.setCurrency("USD")}>
+                  USD ($)
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => props.setCurrency("EUR")}>
+                  EUR (€)
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => props.setCurrency("GBP")}>
+                  GBP (£)
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => props.setCurrency("YEN")}>
+                  YEN (¥)
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => props.setCurrency("BRL")}>
+                  BRL (R$)
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => props.setCurrency("CNY")}>
+                  CNY (¥)
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
