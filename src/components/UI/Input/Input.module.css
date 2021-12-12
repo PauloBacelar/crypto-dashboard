@@ -1,0 +1,27 @@
+.input-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: #212529;
+  color: #fff;
+}
+
+.label {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .input {
+    width: 200px;
+  }
+}

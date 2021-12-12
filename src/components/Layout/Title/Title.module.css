@@ -1,6 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .text {
   color: #ddd;
   text-align: center;
+  max-width: 1024px;
 }
 
 .text h1 {

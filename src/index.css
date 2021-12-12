@@ -1,12 +1,20 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #303440 !important;
+  display: flex;
+  justify-content: center;
 }
 
-header nav {
-  height: 80px;
+@media only screen and (min-width: 576px) {
+  header nav {
+    height: 80px;
+  }
 }
 
 main {
   margin-top: 100px;
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
