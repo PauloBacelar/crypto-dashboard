@@ -1,3 +1,6 @@
+import "./App.css";
+import data from "./api";
+
 const App = () => {
   return (
     <div>
