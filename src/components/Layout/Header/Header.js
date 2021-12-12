@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import styles from "./Header.module.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 

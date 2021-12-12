@@ -1,0 +1,8 @@
+.text {
+  color: #ddd;
+  text-align: center;
+}
+
+.text h1 {
+  margin-bottom: 1rem;
+}

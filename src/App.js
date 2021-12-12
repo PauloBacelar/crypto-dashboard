@@ -1,12 +1,18 @@
-import "./App.css";
 import data from "./api";
-import Header from "./Layout/Header/Header";
+import Header from "./components/Layout/Header/Header";
+import Title from "./components/Layout/TItle/Title";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+      <header>
+        <Header />
+      </header>
+
+      <main>
+        <Title />
+      </main>
+    </>
   );
 };
 
