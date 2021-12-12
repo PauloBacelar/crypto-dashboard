@@ -1,0 +1,12 @@
+.header {
+  margin: 0 3rem;
+  display: flex;
+  max-width: 1024px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}

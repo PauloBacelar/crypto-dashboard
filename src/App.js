@@ -1,10 +1,11 @@
 import "./App.css";
 import data from "./api";
+import Header from "./Layout/Header/Header";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Header />
     </div>
   );
 };
