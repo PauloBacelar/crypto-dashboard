@@ -4,9 +4,10 @@ import Header from "./components/Layout/Header/Header";
 import Title from "./components/Layout/Title/Title";
 import Input from "./components/UI/Input/Input";
 import Loader from "./components/UI/Loader/Loader";
+import CoinsGrid from "./components/Coins/CoinsGrid/CoinsGrid";
 
 const App = () => {
-  const [search, setSearch] = useState("");
+  const [, setSearch] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [homeData, setHomeData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,8 @@ const App = () => {
             }}
           />
         )}
+
+        {!loading && <CoinsGrid data={homeData} />}
       </main>
     </>
   );

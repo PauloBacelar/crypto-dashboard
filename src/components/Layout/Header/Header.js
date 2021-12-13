@@ -15,7 +15,8 @@ const Header = (props) => {
       <div className={styles.header}>
         <div>
           <Navbar.Brand>
-            <img src={logo} width="40px" height="40px" /> Crypto Dashboard
+            <img src={logo} width="40px" height="40px" alt="Logo" /> Crypto
+            Dashboard
           </Navbar.Brand>
         </div>
 
