@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.card-top h2 {
+  font-size: 1.75rem;
+}
+
 .card-top h2 span {
   color: #999;
   font-size: 1.25rem;

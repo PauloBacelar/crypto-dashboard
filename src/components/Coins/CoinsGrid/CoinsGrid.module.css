@@ -7,3 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
