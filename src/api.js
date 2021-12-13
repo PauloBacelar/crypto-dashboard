@@ -9,11 +9,11 @@ const BASE_URL = "https://coingecko.p.rapidapi.com";
 const fetchData = async (endpoint, params) => {
   const options = {
     method: "GET",
-    url: BASE_URL + endpoint,
+    url: "https://coingecko.p.rapidapi.com/coins/markets",
     params,
     headers: {
       "x-rapidapi-host": "coingecko.p.rapidapi.com",
-      "x-rapidapi-key": API_KEY,
+      "x-rapidapi-key": "859327c415mshc26c9950ac5fccap19b7dejsn0945ec15cc45",
     },
   };
 

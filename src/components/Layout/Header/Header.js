@@ -39,7 +39,7 @@ const Header = (props) => {
                 <NavDropdown.Item onClick={() => props.setCurrency("GBP")}>
                   GBP (£)
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => props.setCurrency("YEN")}>
+                <NavDropdown.Item onClick={() => props.setCurrency("JPY")}>
                   YEN (¥)
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => props.setCurrency("BRL")}>
