@@ -2,8 +2,8 @@
   color: #fff;
   margin-top: 2rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 300px;
-  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

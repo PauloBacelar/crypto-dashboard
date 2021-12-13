@@ -1,9 +1,21 @@
 import styles from "./CoinCard.module.css";
 
-const CoinCard = () => {
+const CoinCard = (props) => {
   return (
     <div className={styles.card}>
-      <h1>CoinCard</h1>
+      <div className={styles.content}>
+        <div className={styles["card-top"]}>
+          <img
+            src={props.imgUrl}
+            alt={`${props.name} crypto logo`}
+            className={styles.logo}
+          />
+
+          <h2>
+            {props.name} <br /> <span>({props.symbol.toUpperCase()})</span>
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };
