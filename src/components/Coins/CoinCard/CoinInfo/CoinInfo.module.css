@@ -1,0 +1,18 @@
+.logo {
+  height: 70px;
+  margin-right: 15px;
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+}
+
+.coin-info h2 {
+  font-size: 1.6em;
+}
+
+.coin-info h2 span {
+  color: #999;
+  font-size: 1.25rem;
+}
