@@ -53,7 +53,7 @@ const App = () => {
           />
         )}
 
-        {!loading && <CoinsGrid data={homeData} />}
+        {!loading && <CoinsGrid data={homeData} currency={currency} />}
       </main>
     </>
   );
