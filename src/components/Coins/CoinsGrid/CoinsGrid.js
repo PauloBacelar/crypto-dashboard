@@ -2,10 +2,13 @@ import styles from "./CoinsGrid.module.css";
 import CoinCard from "../CoinCard/CoinCard";
 
 const CoinsGrid = (props) => {
+  const searchedCoins = props.data.filter((coin) =>
+    coin.id.includes(props.search)
+  );
+
   return (
     <div className={styles.container}>
-      {props.data.map((coin) => {
-        console.log(coin);
+      {searchedCoins.map((coin) => {
         return (
           <CoinCard
             key={Math.random().toString()}

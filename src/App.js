@@ -7,7 +7,7 @@ import Loader from "./components/UI/Loader/Loader";
 import CoinsGrid from "./components/Coins/CoinsGrid/CoinsGrid";
 
 const App = () => {
-  const [, setSearch] = useState("");
+  const [search, setSearch] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [homeData, setHomeData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,7 +53,9 @@ const App = () => {
           />
         )}
 
-        {!loading && <CoinsGrid data={homeData} currency={currency} />}
+        {!loading && (
+          <CoinsGrid data={homeData} currency={currency} search={search} />
+        )}
       </main>
     </>
   );

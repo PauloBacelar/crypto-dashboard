@@ -1,5 +1,4 @@
 import styles from "./CoinCard.module.css";
-import { OverlayTrigger, Popover } from "react-bootstrap";
 import CoinInfo from "./CoinInfo/CoinInfo";
 import CoinPrice from "./CoinPrice/CoinPrice";
 import CoinStats from "./CoinStats/CoinStats";
