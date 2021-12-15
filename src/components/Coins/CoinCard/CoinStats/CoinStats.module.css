@@ -22,3 +22,9 @@
 .button:hover {
   background-color: rgba(48, 52, 64, 0.75);
 }
+
+@media only screen and (max-width: 370px) {
+  .button {
+    height: 65px;
+  }
+}

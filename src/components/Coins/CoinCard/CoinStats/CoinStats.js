@@ -2,7 +2,7 @@ import { Tooltip, OverlayTrigger } from "react-bootstrap";
 import { BsInfoCircleFill } from "react-icons/bs";
 import styles from "./CoinStats.module.css";
 
-const CoinStats = () => {
+const CoinStats = (props) => {
   const iconStyles = { marginBottom: 3.5, marginRight: 3 };
 
   const marketCapTooltip = (props) => {
@@ -25,13 +25,15 @@ const CoinStats = () => {
     <div className={styles.stats}>
       <OverlayTrigger placement="top" overlay={marketCapTooltip}>
         <button className={styles.button}>
-          <BsInfoCircleFill style={iconStyles} /> Market cap: USD 123123
+          <BsInfoCircleFill style={iconStyles} /> Market cap: {props.currency}{" "}
+          {props.marketCap.toLocaleString()}
         </button>
       </OverlayTrigger>
 
       <OverlayTrigger placement="top" overlay={volumeTooltip}>
         <button className={styles.button}>
-          <BsInfoCircleFill style={iconStyles} /> Volume: 1238120938
+          <BsInfoCircleFill style={iconStyles} /> Volume:{" "}
+          {props.volume.toLocaleString()}
         </button>
       </OverlayTrigger>
 

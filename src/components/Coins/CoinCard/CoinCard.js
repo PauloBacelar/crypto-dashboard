@@ -21,7 +21,11 @@ const CoinCard = (props) => {
           priceChange={props.priceChange}
         />
 
-        <CoinStats />
+        <CoinStats
+          currency={props.currency}
+          marketCap={props.marketCap}
+          volume={props.volume}
+        />
       </div>
     </div>
   );
