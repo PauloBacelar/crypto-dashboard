@@ -1,0 +1,24 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.button {
+  background-color: rgb(48, 52, 64);
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: rgba(48, 52, 64, 0.75);
+}

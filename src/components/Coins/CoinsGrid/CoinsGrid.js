@@ -5,7 +5,7 @@ const CoinsGrid = (props) => {
   return (
     <div className={styles.container}>
       {props.data.map((coin) => {
-        console.log(coin);
+        // console.log(coin);
         return (
           <CoinCard
             key={Math.random().toString()}
