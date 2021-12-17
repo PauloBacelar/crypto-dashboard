@@ -37,7 +37,7 @@ const CoinStats = (props) => {
         </button>
       </OverlayTrigger>
 
-      <button className={styles.button}>More info</button>
+      <button className={styles.button}>Click here for more info</button>
     </div>
   );
 };

@@ -2,8 +2,9 @@ import styles from "./CoinsGrid.module.css";
 import CoinCard from "../CoinCard/CoinCard";
 
 const CoinsGrid = (props) => {
-  const searchedCoins = props.data.filter((coin) =>
-    coin.id.includes(props.search)
+  const searchedCoins = props.data.filter(
+    (coin) =>
+      coin.id.includes(props.search) || coin.symbol.includes(props.search)
   );
 
   return (

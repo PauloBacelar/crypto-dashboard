@@ -21,7 +21,7 @@ const CoinPrice = (props) => {
           <BsFillCaretDownFill color="#bd5e74" />
         )}
         <span style={{ color: priceIsUp ? "#2cb362" : "#bd5e74" }}>
-          {props.priceChange.toFixed(2)}%
+          {props.priceChange && props.priceChange.toFixed(2)}%
         </span>{" "}
         (24h)
       </h4>

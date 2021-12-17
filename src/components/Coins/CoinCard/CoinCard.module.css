@@ -4,6 +4,11 @@
   width: 370px;
   margin-bottom: 30px;
   border-radius: 5px;
+  transition: all ease 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .content {
