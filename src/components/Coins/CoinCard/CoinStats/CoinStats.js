@@ -37,9 +37,16 @@ const CoinStats = (props) => {
         </button>
       </OverlayTrigger>
 
-      <button className={styles.button}>Click here for more info</button>
+      <button
+        className={styles.button}
+        onClick={() => props.setChosenCoin(props.id)}
+      >
+        Click here for more info
+      </button>
     </div>
   );
 };
+
+// props.setChosenCoin
 
 export default CoinStats;

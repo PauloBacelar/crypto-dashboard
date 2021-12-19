@@ -13,6 +13,7 @@ const CoinsGrid = (props) => {
         return (
           <CoinCard
             key={Math.random().toString()}
+            id={coin.id}
             name={coin.name}
             imgUrl={coin.image}
             symbol={coin.symbol}
@@ -21,6 +22,7 @@ const CoinsGrid = (props) => {
             currency={props.currency}
             marketCap={coin.market_cap}
             volume={coin.total_volume}
+            setChosenCoin={props.setChosenCoin}
           />
         );
       })}

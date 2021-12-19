@@ -5,11 +5,14 @@ import Title from "./components/Layout/Title/Title";
 import Input from "./components/UI/Input/Input";
 import Loader from "./components/UI/Loader/Loader";
 import CoinsGrid from "./components/Coins/CoinsGrid/CoinsGrid";
+import Modal from "./components/UI/Modal/Modal";
 
 const App = () => {
   const [search, setSearch] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [homeData, setHomeData] = useState([]);
+  const [chosenCoin, setChosenCoin] = useState(null);
+  const [coinData, setCoinData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,6 +34,8 @@ const App = () => {
         }
       });
   }, [currency]);
+
+  console.log(chosenCoin);
 
   return (
     <>
@@ -54,9 +59,16 @@ const App = () => {
         )}
 
         {!loading && (
-          <CoinsGrid data={homeData} currency={currency} search={search} />
+          <CoinsGrid
+            data={homeData}
+            currency={currency}
+            search={search}
+            setChosenCoin={setChosenCoin}
+          />
         )}
       </main>
+
+      {chosenCoin && <Modal />}
     </>
   );
 };

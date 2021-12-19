@@ -24,6 +24,8 @@ const CoinCard = (props) => {
           currency={props.currency}
           marketCap={props.marketCap}
           volume={props.volume}
+          setChosenCoin={props.setChosenCoin}
+          id={props.id}
         />
       </div>
     </div>
