@@ -35,6 +35,25 @@ const App = () => {
       });
   }, [currency]);
 
+  // useEffect(() => {
+  //   if (chosenCoin) {
+  //     data
+  //       .getCoinHistory(chosenCoin, 1608368168, 1639904168, currency)
+  //       .then((result) => {
+  //         console.log(result.data);
+  //       })
+  //       .catch((error) => {
+  //         if (error.response) {
+  //           console.log(error.response);
+  //         } else if (error.request) {
+  //           console.log(error.request);
+  //         } else if (error.message) {
+  //           console.log(error.message);
+  //         }
+  //       });
+  //   }
+  // }, [chosenCoin]);
+
   console.log(chosenCoin);
 
   return (
