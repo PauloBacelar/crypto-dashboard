@@ -14,6 +14,7 @@ const App = () => {
   const [chosenCoin, setChosenCoin] = useState(null);
   const [coinData, setCoinData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -41,6 +42,7 @@ const App = () => {
         .getCoinHistory(chosenCoin, 1608368168, 1639904168, currency)
         .then((result) => {
           setCoinData(result.data);
+          setModal(true);
         })
         .catch((error) => {
           if (error.response) {
@@ -52,9 +54,7 @@ const App = () => {
           }
         });
     }
-  }, [chosenCoin]);
-
-  console.log(coinData);
+  }, [chosenCoin, currency]);
 
   return (
     <>
@@ -87,7 +87,7 @@ const App = () => {
         )}
       </main>
 
-      {chosenCoin && <Modal />}
+      {modal && <Modal data={coinData} onClose={setModal} />}
     </>
   );
 };
