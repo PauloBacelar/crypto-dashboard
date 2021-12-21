@@ -37,9 +37,9 @@ const App = () => {
   }, [currency]);
 
   useEffect(() => {
-    if (chosenCoin) {
+    if (chosenCoin !== null) {
       data
-        .getCoinHistory(chosenCoin, 1608368168, 1639904168, currency)
+        .getCoinHistory(chosenCoin, "1608368168", "1639904168", currency)
         .then((result) => {
           setCoinData(result.data);
           setModal(true);
@@ -55,6 +55,12 @@ const App = () => {
         });
     }
   }, [chosenCoin, currency]);
+
+  useEffect(() => {
+    if (!modal) {
+      setChosenCoin(null);
+    }
+  }, [modal]);
 
   return (
     <>
