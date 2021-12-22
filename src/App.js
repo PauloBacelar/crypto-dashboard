@@ -93,7 +93,13 @@ const App = () => {
         )}
       </main>
 
-      {modal && <Modal data={coinData} onClose={setModal} />}
+      {modal && (
+        <Modal
+          coinHistory={coinData}
+          onClose={setModal}
+          coinInfo={homeData.filter((coin) => coin.id === chosenCoin)[0]}
+        />
+      )}
     </>
   );
 };

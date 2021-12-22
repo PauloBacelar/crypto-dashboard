@@ -6,15 +6,46 @@
   left: 0;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .card {
   background-color: #303440;
-  height: 300px;
-  width: 100px;
+  color: #fff;
+  height: 450px;
+  width: 90%;
+  max-width: 900px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999;
+  padding: 20px;
+}
+
+.card img {
+  height: 75px;
+  margin-right: 15px;
+}
+
+.symbol {
+  color: #999;
+  font-size: 1.25rem;
+}
+
+.coin-info {
+  display: flex;
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.close-icon:hover {
+  color: #ddd;
 }

@@ -1,4 +1,6 @@
 import styles from "./Modal.module.css";
+import { AiFillCloseCircle } from "react-icons/ai";
+import Chart from "./Chart/Chart";
 
 const Overlay = (props) => {
   return (
@@ -6,19 +8,39 @@ const Overlay = (props) => {
   );
 };
 
-const Card = () => {
-  return <div className={styles.card}></div>;
+const Card = (props) => {
+  return <div className={styles.card}>{props.children}</div>;
 };
 
 const Modal = (props) => {
-  console.log(props);
+  const xLabels = props.coinHistory.prices.map((date) =>
+    new Date(date[0]).toLocaleDateString()
+  );
+  const yLabels = props.coinHistory.prices.map((date) => date[1]);
 
   return (
     <div>
       <Card>
-        <h1>This is the content of the modal</h1>
+        <div className={styles["coin-info"]}>
+          <img src={props.coinInfo.image} alt="" />
+          <h2>
+            {props.coinInfo.name}
+            <br />
+            <span className={styles.symbol}>
+              ({props.coinInfo.symbol.toUpperCase()})
+            </span>
+          </h2>
+        </div>
+
+        <AiFillCloseCircle
+          className={styles["close-icon"]}
+          onClick={() => props.onClose(false)}
+        />
+
+        <Chart xLabels={xLabels} yLabels={yLabels} name={props.coinInfo.name} />
       </Card>
-      <Overlay onClose={props.onClose} />
+
+      <Overlay />
     </div>
   );
 };
