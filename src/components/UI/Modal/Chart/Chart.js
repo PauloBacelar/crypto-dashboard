@@ -2,6 +2,8 @@ import "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 
 const DataChart = (props) => {
+  const isUp = props.yLabels[props.yLabels.length - 1] >= props.yLabels[0];
+
   return (
     <div id="chart">
       <Chart
@@ -12,15 +14,21 @@ const DataChart = (props) => {
           datasets: [
             {
               id: 1,
-              label: "",
+              label: `${props.name} price over time`,
               data: props.yLabels,
-              backgroundColor: "rgba(16, 100, 42, .5)",
+              backgroundColor: isUp
+                ? "rgba(16, 100, 42, .5)"
+                : "rgba(100, 16, 42, .5)",
               fill: true,
               pointRadius: 1.5,
-              borderColor: "rgb(16, 200, 42)",
+              borderColor: isUp ? "rgb(16, 175, 42)" : "rgb(200, 16, 42)",
               borderWidth: 2,
             },
           ],
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+          },
         }}
       />
     </div>
