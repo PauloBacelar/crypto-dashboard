@@ -14,7 +14,7 @@ const DataChart = (props) => {
           datasets: [
             {
               id: 1,
-              label: `${props.name} price over time`,
+              label: `${props.name} price`,
               data: props.yLabels,
               backgroundColor: isUp
                 ? "rgba(16, 100, 42, .5)"
