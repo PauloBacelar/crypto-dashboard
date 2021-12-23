@@ -39,7 +39,7 @@ const App = () => {
   useEffect(() => {
     if (chosenCoin !== null) {
       data
-        .getCoinHistory(chosenCoin, "1608368168", "1639904168", currency)
+        .getCoinHistory(chosenCoin, currency)
         .then((result) => {
           setCoinData(result.data);
           setModal(true);

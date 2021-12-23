@@ -30,11 +30,10 @@ const data = {
       order: "market_cap_desc",
     }),
 
-  getCoinHistory: (coinID, from, to, currency) =>
-    fetchData(`/coins/${coinID}/market_chart/range`, {
-      from: from,
+  getCoinHistory: (coinID, currency) =>
+    fetchData(`/coins/${coinID}/market_chart`, {
       vs_currency: currency,
-      to: to,
+      days: 365,
     }),
 };
 
