@@ -40,7 +40,7 @@ const Modal = (props) => {
         <Chart xLabels={xLabels} yLabels={yLabels} name={props.coinInfo.name} />
       </Card>
 
-      <Overlay />
+      <Overlay onClose={props.onClose} />
     </div>
   );
 };
