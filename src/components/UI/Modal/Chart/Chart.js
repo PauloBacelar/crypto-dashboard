@@ -26,7 +26,6 @@ const DataChart = (props) => {
             },
           ],
           options: {
-            maintainAspectRatio: false,
             responsive: true,
           },
         }}

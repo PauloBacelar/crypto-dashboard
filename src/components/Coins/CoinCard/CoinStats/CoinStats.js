@@ -41,12 +41,10 @@ const CoinStats = (props) => {
         className={styles.button}
         onClick={() => props.setChosenCoin(props.id)}
       >
-        Click here for more info
+        Check price history
       </button>
     </div>
   );
 };
-
-// props.setChosenCoin
 
 export default CoinStats;
