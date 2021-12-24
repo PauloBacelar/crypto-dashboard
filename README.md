@@ -6,7 +6,7 @@
     🚀 Cryptocurrencies Dashboard
 </h1>
 
-<p align="center">Check price, volume, market cap and price history of the main cryptocurrencies</p>
+<p align="center">Check price, volume, market cap and price history of the main cryptocurrencies of the market</p>
 
 <p align="center">
   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
