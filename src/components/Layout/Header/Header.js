@@ -25,11 +25,6 @@ const Header = (props) => {
 
           <Navbar.Collapse>
             <Nav>
-              <NavDropdown title="Language">
-                <NavDropdown.Item>English (EN-US)</NavDropdown.Item>
-                <NavDropdown.Item>Português (PT-BR)</NavDropdown.Item>
-              </NavDropdown>
-
               <NavDropdown title={`Currency (${props.currency})`}>
                 <NavDropdown.Item onClick={() => props.setCurrency("USD")}>
                   USD ($)

@@ -49,3 +49,7 @@
 .close-icon:hover {
   color: #ddd;
 }
+
+.select {
+  margin-top: 7.5px;
+}

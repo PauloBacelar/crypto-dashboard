@@ -1,5 +1,5 @@
 import styles from "./Modal.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Chart from "./Chart/Chart";
 
@@ -14,10 +14,17 @@ const Card = (props) => {
 };
 
 const Modal = (props) => {
-  const fullDateHistory = props.coinHistory.prices.map((date) =>
-    new Date(date[0]).toLocaleDateString()
+  const fullDateHistory = useMemo(
+    () =>
+      props.coinHistory.prices.map((date) =>
+        new Date(date[0]).toLocaleDateString()
+      ),
+    [props.coinHistory.prices]
   );
-  const fullPriceHistory = props.coinHistory.prices.map((date) => date[1]);
+  const fullPriceHistory = useMemo(
+    () => props.coinHistory.prices.map((date) => date[1]),
+    [props.coinHistory.prices]
+  );
 
   const [time, setTime] = useState(365);
   const [dateHistory, setDateHistory] = useState(fullDateHistory);
@@ -26,7 +33,7 @@ const Modal = (props) => {
   useEffect(() => {
     setDateHistory(fullDateHistory.slice(365 - time));
     setPriceHistory(fullPriceHistory.slice(365 - time));
-  }, [time]);
+  }, [time, fullDateHistory, fullPriceHistory]);
 
   return (
     <div>
@@ -48,6 +55,7 @@ const Modal = (props) => {
           id="time"
           value={time}
           onChange={(e) => setTime(+e.target.value)}
+          className={styles.select}
         >
           <option value="365">365d</option>
           <option value="180">6mo</option>

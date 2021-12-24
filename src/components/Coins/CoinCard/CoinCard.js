@@ -2,6 +2,7 @@ import styles from "./CoinCard.module.css";
 import CoinInfo from "./CoinInfo/CoinInfo";
 import CoinPrice from "./CoinPrice/CoinPrice";
 import CoinStats from "./CoinStats/CoinStats";
+import React from "react";
 
 const CoinCard = (props) => {
   return (
@@ -32,4 +33,4 @@ const CoinCard = (props) => {
   );
 };
 
-export default CoinCard;
+export default React.memo(CoinCard);

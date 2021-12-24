@@ -1,10 +1,15 @@
 import styles from "./CoinsGrid.module.css";
 import CoinCard from "../CoinCard/CoinCard";
+import { useMemo } from "react";
 
 const CoinsGrid = (props) => {
-  const searchedCoins = props.data.filter(
-    (coin) =>
-      coin.id.includes(props.search) || coin.symbol.includes(props.search)
+  const searchedCoins = useMemo(
+    () =>
+      props.data.filter(
+        (coin) =>
+          coin.id.includes(props.search) || coin.symbol.includes(props.search)
+      ),
+    [props.data, props.search]
   );
 
   return (
