@@ -18,3 +18,18 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
+::-webkit-scrollbar {
+  width: 12.5px;
+  background-color: #191a1c;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 170, 170);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(141, 141, 141, 0.75);
+}
