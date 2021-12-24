@@ -1,3 +1,4 @@
+import reactDom from "react-dom";
 import styles from "./Modal.module.css";
 import { useState, useEffect, useMemo } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -35,8 +36,8 @@ const Modal = (props) => {
     setPriceHistory(fullPriceHistory.slice(365 - time));
   }, [time, fullDateHistory, fullPriceHistory]);
 
-  return (
-    <div>
+  return reactDom.createPortal(
+    <>
       <Card>
         <div className={styles["coin-info"]}>
           <img src={props.coinInfo.image} alt={`${props.coinInfo.name} logo`} />
@@ -77,7 +78,8 @@ const Modal = (props) => {
       </Card>
 
       <Overlay onClose={props.onClose} />
-    </div>
+    </>,
+    document.querySelector("#portal")
   );
 };
 
