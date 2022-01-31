@@ -55,12 +55,13 @@ Also, an IDE is recommended for editing the code. I recommend [VSCode](https://c
 # Clone this repository
 $ git clone https://github.com/PauloBacelar/crypto-dashboard
 
+# Enter on crypto-dashboard folder
+$ cd crypto-dashboard
+
 # Install the dependencies
-$ yarn or npm
+$ npm install
 
 # Run the application
-$ yarn start
-or
 $ npm start
 ```
 
