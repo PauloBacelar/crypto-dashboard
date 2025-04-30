@@ -1,3 +1,7 @@
+## 🚨 Important
+Unfortunately, CoinGecko discontinued their keyless API, which turns crypto-dashboard broken. No more support will be given to this project.
+
+<hr />
 <h4 align="center">
   <img src="https://github.com/PauloBacelar/crypto-dashboard/blob/main/public/logo.png" alt="logo" height="75"/>
 </h4>
